@@ -1712,8 +1712,8 @@ header .logo_text {
   -ms-flex-preferred-size: 45%;
       flex-basis: 45%;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
-  background-image: -o-repeating-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 58px, rgba(255, 255, 255, 0.1) 58px, rgba(255, 255, 255, 0.1) 59px);
-  background-image: repeating-linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 58px, rgba(255, 255, 255, 0.1) 58px, rgba(255, 255, 255, 0.1) 59px);
+  background-image: -o-repeating-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 9%, rgba(255, 255, 255, 0.1) 9%, rgba(255, 255, 255, 0.1) calc(9% + 1px));
+  background-image: repeating-linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 9%, rgba(255, 255, 255, 0.1) 9%, rgba(255, 255, 255, 0.1) calc(9% + 1px));
 }
 
 .menu_content_image_wr {
@@ -1723,9 +1723,20 @@ header .logo_text {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
-  background-image: -o-repeating-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 58px, rgba(255, 255, 255, 0.1) 58px, rgba(255, 255, 255, 0.1) 59px);
-  background-image: repeating-linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 58px, rgba(255, 255, 255, 0.1) 58px, rgba(255, 255, 255, 0.1) 59px);
+  background-image: -o-repeating-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 8.3%, rgba(255, 255, 255, 0.1) 8.3%, rgba(255, 255, 255, 0.1) calc(8.3% + 1px));
+  background-image: repeating-linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 8.3%, rgba(255, 255, 255, 0.1) 8.3%, rgba(255, 255, 255, 0.1) calc(8.3% + 1px));
+}
+
+.menu_content_image_wr picture {
+  height: 77%;
+}
+
+.menu_content_image_wr img {
+  height: 100%;
 }
 
 .menu_content_nav_row3_contacts {
@@ -1919,6 +1930,8 @@ header .logo_text {
 
 .moment_content_tmk .moment_content_image_img {
   background-image: url(../img/moment/moment_content_img.png);
+  top: -10%;
+  height: 115%;
 }
 
 .moment_content_schedule {
@@ -2020,6 +2033,8 @@ header .logo_text {
 
 .moment_content_gt .moment_content_image_img {
   background-image: url(../img/gt/img_gt.png);
+  top: -4%;
+  height: 111%;
 }
 
 .moment_content_sfl > div {
@@ -2087,6 +2102,8 @@ header .logo_text {
 
 .moment_content_sfl .moment_content_image_img {
   background-image: url(../img/sfl/moment_content_img_sfl.png);
+  top: -4%;
+  height: 125%;
 }
 
 .moment_content_fl > div {
@@ -2118,6 +2135,8 @@ header .logo_text {
 
 .moment_content_fl .moment_content_image_img {
   background-image: url(../img/fl/moment_content_img_fl.png);
+  top: -4%;
+  height: 125%;
 }
 
 .moment_content_per_center,
@@ -2262,8 +2281,6 @@ header .logo_text {
 
 .moment_content_image_img {
   position: absolute;
-  top: -5%;
-  height: 111%;
   width: 100%;
   background-size: contain;
   background-position: 50%;

@@ -63,13 +63,15 @@ function showImg() {
             picture.src = './img/moment/moment_content_img.png';
       picture.srcset =
         './img/moment/moment_content_img2x.png 2x, ./img/moment/moment_content_img3x.png 3x';
-      break;
+     
+         break;
     case 'momentumgt_link':
       source.srcset =
         './img/gt/img_gt.webp 1x, ./img/gt/img_gt2x.webp 2x, ./img/gt/img_gt3x.webp 3x';
       picture.src = './img/gt/img_gt.png';
       picture.srcset =
         './img/gt/img_gt2x.png 2x, ./img/gt/img_gt3x.png 3x';
+    
       break;
     case 'momentumsfl_link':
       source.srcset =
