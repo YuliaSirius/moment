@@ -17,10 +17,10 @@ function scrollHorizontally(e) {
     return;
   }
   if (counter >= 0) {
-    delBlur()
+    delBlur();
     blurred = false;
-   } else {
-       blur();
+  } else {
+    blur();
     blurred = true;
   }
   if (counter > 0) {
@@ -33,24 +33,20 @@ function scrollHorizontally(e) {
 }
 
 function blur() {
-console.log(blurred)
   if (blurred) {
     return;
   }
-  let elements = document.querySelector('.blur');
+  let elements = document.querySelector('#blur');
   elements.beginElement();
 }
-
 
 function delBlur() {
   if (!blurred) {
     return;
   }
-  let elements = document.querySelector('.delblur');
-   elements.beginElement();
+  let elements = document.querySelector('#delblur');
+  elements.beginElement();
 }
-
-
 
 function addMouseWell(elem, callback) {
   if (elem.addEventListener) {

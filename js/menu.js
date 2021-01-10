@@ -52,30 +52,38 @@ menu.querySelector('.momentumgt_link').addEventListener('mouseenter', showImg);
 menu.querySelector('.momentumsfl_link').addEventListener('mouseenter', showImg);
 menu.querySelector('.momentumfl_link').addEventListener('mouseenter', showImg);
 
-let picture = menu.querySelector('.menu_content_image_img');
 let pictureWr = menu.querySelector('.menu_content_image_wr');
+let picture = pictureWr.querySelector('img');
 let source = pictureWr.querySelector('source');
 
 function showImg() {
   switch (this.classList[0]) {
     case 'momentum_link':
-      source.srcset = './img/moment/moment_content_img.webp';
-      picture.src = './img/moment/moment_content_img.png';
+      source.srcset = './img/moment/moment_content_img.webp 1x, ./img/moment/moment_content_img2x.webp 2x, ./img/moment/moment_content_img3x.webp 3x';
+            picture.src = './img/moment/moment_content_img.png';
+      picture.srcset =
+        './img/moment/moment_content_img2x.png 2x, ./img/moment/moment_content_img3x.png 3x';
       break;
     case 'momentumgt_link':
-      source.srcset = './img/gt/moment_content_img_gt.webp';
-      picture.src = './img/gt/moment_content_img_gt.png';
+      source.srcset =
+        './img/gt/img_gt.webp 1x, ./img/gt/img_gt2x.webp 2x, ./img/gt/img_gt3x.webp 3x';
+      picture.src = './img/gt/img_gt.png';
+      picture.srcset =
+        './img/gt/img_gt2x.png 2x, ./img/gt/img_gt3x.png 3x';
       break;
     case 'momentumsfl_link':
-      source.srcset = './img/sfl/moment_content_img_sfl.webp';
+      source.srcset =
+        './img/sfl/moment_content_img_sfl.webp 1x, ./img/sfl/moment_content_img_sfl2x.webp 2x, ./img/sfl/moment_content_img_sfl3x.webp 3x';
       picture.src = './img/sfl/moment_content_img_sfl.png';
+      picture.srcset =
+        './img/sfl/moment_content_img_sfl2x.png 2x, ./img/sfl/moment_content_img_sfl3x.png 3x';
       break;
     case 'momentumfl_link':
-      source.srcset = './img/fl/moment_content_img_fl.webp';
+      source.srcset =
+        './img/fl/moment_content_img_fl.webp 1x, ./img/fl/moment_content_img_fl2x.webp 2x, ./img/fl/moment_content_img_fl3x.webp 3x';
       picture.src = './img/fl/moment_content_img_fl.png';
+      picture.srcset =
+        './img/fl/moment_content_img_fl2x.png 2x, ./img/fl/moment_content_img_fl3x.png 3x';
       break;
   }
 }
-
-// image1.addEventListener('mouseenter', mouseOver1);
-// image1.addEventListener('mouseleave', mouseOver1);

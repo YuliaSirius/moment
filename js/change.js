@@ -292,11 +292,12 @@
   }
 
   addMouseWell(window, scrollChange);
+
   function blur() {
     if (blurrHome) {
       return;
     }
-    let elements = document.querySelector('.blur');
+    let elements = document.querySelector('#blur');
     elements.beginElement();
     blurrHome = true;
   }
@@ -305,7 +306,7 @@
     if (!blurrHome) {
       return;
     }
-    let elements = document.querySelector('.delblur');
+    let elements = document.querySelector('#delblur');
     elements.beginElement();
     blurrHome = false;
   }

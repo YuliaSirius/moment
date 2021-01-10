@@ -66,13 +66,11 @@ let imagesHome = [
   './img/home/engineer2x.webp',
   './img/home/engineer3x.webp',
 
-
-  './img/home/menu_image1x.png',
-  './img/home/menu_image2x.png',
-  './img/home/menu_image3x.png',
-  './img/home/menu_image1x.webp',
-  './img/home/menu_image2x.webp',
-  './img/home/menu_image3x.webp',
-
+  // './img/home/menu_image1x.png',
+  // './img/home/menu_image2x.png',
+  // './img/home/menu_image3x.png',
+  // './img/home/menu_image1x.webp',
+  // './img/home/menu_image2x.webp',
+  // './img/home/menu_image3x.webp',
 ];
 // })();

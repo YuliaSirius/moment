@@ -2,6 +2,7 @@
 'use strict';
 
 let openModel = false;
+
 function testWebP(callback) {
   let webP = new Image();
   webP.onload = webP.onerror = function () {
@@ -37,27 +38,29 @@ iconBurger.addEventListener('click', closeRequest);
 
 function openRequest() {
   if (!openForm) {
-    iconBurger.querySelector('p:first-child').classList.add(
-      'burger_active_first_line'
-    );
-    iconBurger.querySelector('p:last-child').classList.add(
-      'burger_active_second_line'
-    );
+    iconBurger
+      .querySelector('p:first-child')
+      .classList.add('burger_active_first_line');
+    iconBurger
+      .querySelector('p:last-child')
+      .classList.add('burger_active_second_line');
     application.classList.remove('closeApp');
     application.classList.add('openApp');
     applWr.classList.remove('delAnimAppWr');
     applWr.style.display = 'block';
-  applWr.classList.add('animAppWr');
-  openForm = true
+    applWr.classList.add('animAppWr');
+    openForm = true;
   }
 }
 
 function closeRequest() {
   if (openForm) {
-    iconBurger.querySelector('p:first-child').classList.remove('burger_active_first_line'
-    );
-    iconBurger.querySelector('p:last-child').classList.remove('burger_active_second_line'
-    );
+    iconBurger
+      .querySelector('p:first-child')
+      .classList.remove('burger_active_first_line');
+    iconBurger
+      .querySelector('p:last-child')
+      .classList.remove('burger_active_second_line');
 
     application.classList.add('closeApp');
     setTimeout(() => {
@@ -66,7 +69,7 @@ function closeRequest() {
     }, 300);
     applWr.classList.remove('animAppWr');
     applWr.classList.add('delAnimAppWr');
-    openForm = false
+    openForm = false;
   }
 }
 // })();

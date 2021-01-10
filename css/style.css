@@ -2019,7 +2019,7 @@ header .logo_text {
 }
 
 .moment_content_gt .moment_content_image_img {
-  background-image: url(../img/gt/moment_content_img_gt.png);
+  background-image: url(../img/gt/img_gt.png);
 }
 
 .moment_content_sfl > div {
@@ -2057,10 +2057,6 @@ header .logo_text {
   max-width: 472px;
   width: 100%;
   margin-top: 78px;
-}
-
-.moment_content_sfl .moment_content_image_img {
-  background-image: url(../img/sfl/sfl_image.png);
 }
 
 .moment_content_sfl .moment_content_profile {
@@ -2471,6 +2467,7 @@ header .logo_text {
   background-repeat: no-repeat;
   background-position: 50%;
   position: relative;
+  background-size: 55%;
 }
 
 .connections_content .image2 {
@@ -2478,6 +2475,7 @@ header .logo_text {
   background-repeat: no-repeat;
   background-position: 50%;
   position: relative;
+  background-size: 55%;
 }
 
 .connections_content .image3 {
@@ -2485,6 +2483,7 @@ header .logo_text {
   background-repeat: no-repeat;
   background-position: 50%;
   position: relative;
+  background-size: 55%;
 }
 
 .connections_content .image4 {
@@ -2492,6 +2491,7 @@ header .logo_text {
   background-repeat: no-repeat;
   background-position: 50%;
   position: relative;
+  background-size: 55%;
 }
 
 .connections_content .other-column .connections_content_row {
@@ -3152,9 +3152,9 @@ iframe {
   height: calc(100vh - 181px - 7.5vh - 2px);
 }
 
-.engineer_content_connections .connections_content,
-.employee_content_connections .connections_content,
-.manager_content_connections .connections_content {
+.engineer_content_connections media,
+.employee_content_connections media,
+.manager_content_connections media {
   margin-left: 0;
   height: calc(100% + 1px);
 }
@@ -3241,6 +3241,9 @@ iframe {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
+  padding-top: 70px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .application .menu_header_left_icon-menu {
@@ -3424,8 +3427,13 @@ iframe {
 
 .application_content_img {
   position: absolute;
-  top: 11%;
-  left: 60%;
+  top: 10%;
+  left: 70%;
+  height: 100%;
+}
+
+.application_content_img img {
+  height: 84%;
 }
 
 input[type='email'] {
@@ -3611,6 +3619,154 @@ input[type='tel'] {
   display: none;
 }
 
+@media (-webkit-min-device-pixel-ratio: 2) {
+  .home_images_1 {
+    background-image: url(../img/home/woman2x.png);
+  }
+
+  .home_images_2 {
+    background-image: url(../img/home/manager2x.png);
+  }
+
+  .home_images_3 {
+    background-image: url(../img/home/engineer2x.png);
+  }
+
+  .moment_content_tmk .moment_content_image_img {
+    background-image: url(../img/moment/moment_content_img2x.png);
+  }
+
+  .moment_content_gt .moment_content_image_img {
+    background-image: url(../img/gt/img_gt2x.png);
+  }
+
+  .moment_content_sfl .moment_content_image_img {
+    background-image: url(../img/sfl/moment_content_img_sfl2x.png);
+  }
+
+  .moment_content_fl .moment_content_image_img {
+    background-image: url(../img/fl/moment_content_img_fl2x.png);
+  }
+
+  .moment_main_bg {
+    background-image: url(../img/moment/momentum_bg2x.png);
+  }
+
+  .momentGT_main_bg {
+    background-image: url(../img/gt/momentumGT_bg2x.png);
+  }
+
+  .momentSFL_main_bg {
+    background-image: url(../img/sfl/sfl_image2x.png);
+  }
+
+  .momentFL_main_bg {
+    background-image: url(../img/fl/fl_image2x.png);
+  }
+
+  .connections_content .image1 {
+    background-image: url(../img/connections/moment2x.png);
+  }
+
+  .connections_content .image2 {
+    background-image: url(../img/connections/moment_gt2x.png);
+  }
+
+  .connections_content .image3 {
+    background-image: url(../img/connections/moment_sfl2x.png);
+  }
+
+  .connections_content .image4 {
+    background-image: url(../img/connections/moment_fl2x.png);
+  }
+
+  .employee_main_bg {
+    background-image: url(../img/employee/employee_main_bg2x.png);
+  }
+
+  .engineer_main_bg {
+    background-image: url(../img/engineer/engineer_main_bg2x.png);
+  }
+
+  .manager_main_bg {
+    background-image: url(../img/manager/manager_main_bg2x.png);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+  .home_images_1 {
+    background-image: url(../img/home/woman3x.png);
+  }
+
+  .home_images_2 {
+    background-image: url(../img/home/manager3x.png);
+  }
+
+  .home_images_3 {
+    background-image: url(../img/home/engineer3x.png);
+  }
+
+  .moment_content_tmk .moment_content_image_img {
+    background-image: url(../img/moment/moment_content_img3x.png);
+  }
+
+  .moment_content_gt .moment_content_image_img {
+    background-image: url(../img/gt/img_gt3x.png);
+  }
+
+  .moment_content_sfl .moment_content_image_img {
+    background-image: url(../img/sfl/moment_content_img_sfl3x.png);
+  }
+
+  .moment_content_fl .moment_content_image_img {
+    background-image: url(../img/fl/moment_content_img_fl3x.png);
+  }
+
+  .moment_main_bg {
+    background-image: url(../img/moment/momentum_bg3x.png);
+  }
+
+  .momentGT_main_bg {
+    background-image: url(../img/gt/momentumGT_bg3x.png);
+  }
+
+  .momentSFL_main_bg {
+    background-image: url(../img/sfl/sfl_image3x.png);
+  }
+
+  .momentFL_main_bg {
+    background-image: url(../img/fl/fl_image3x.png);
+  }
+
+  .connections_content .image1 {
+    background-image: url(../img/connections/moment3x.png);
+  }
+
+  .connections_content .image2 {
+    background-image: url(../img/connections/moment_gt3x.png);
+  }
+
+  .connections_content .image3 {
+    background-image: url(../img/connections/moment_sfl3x.png);
+  }
+
+  .connections_content .image4 {
+    background-image: url(../img/connections/moment_fl3x.png);
+  }
+
+  .employee_main_bg {
+    background-image: url(../img/employee/employee_main_bg3x.png);
+  }
+
+  .engineer_main_bg {
+    background-image: url(../img/engineer/engineer_main_bg3x.png);
+  }
+
+  .manager_main_bg {
+    background-image: url(../img/manager/manager_main_bg3x.png);
+  }
+}
+
 .webp .home_images_1 { background-image: url(../img/home/woman1x.webp); }
 
 .webp .home_images_2 { background-image: url(../img/home/manager1x.webp); }
@@ -3619,9 +3775,7 @@ input[type='tel'] {
 
 .webp .moment_content_tmk .moment_content_image_img { background-image: url(../img/moment/moment_content_img.webp); }
 
-.webp .moment_content_gt .moment_content_image_img { background-image: url(../img/gt/moment_content_img_gt.webp); }
-
-.webp .moment_content_sfl .moment_content_image_img { background-image: url(../img/sfl/sfl_image.webp); }
+.webp .moment_content_gt .moment_content_image_img { background-image: url(../img/gt/img_gt.webp); }
 
 .webp .moment_content_sfl .moment_content_image_img { background-image: url(../img/sfl/moment_content_img_sfl.webp); }
 
@@ -3648,3 +3802,183 @@ input[type='tel'] {
 .webp .engineer_main_bg { background-image: url(../img/engineer/engineer_main_bg.webp); }
 
 .webp .manager_main_bg { background-image: url(../img/manager/manager_main_bg.webp); }
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .home_images_1 { background-image: url(../img/home/woman2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .home_images_2 { background-image: url(../img/home/manager2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .home_images_3 { background-image: url(../img/home/engineer2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .moment_content_tmk .moment_content_image_img { background-image: url(../img/moment/moment_content_img2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .moment_content_gt .moment_content_image_img { background-image: url(../img/gt/img_gt2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .moment_content_sfl .moment_content_image_img { background-image: url(../img/sfl/moment_content_img_sfl2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .moment_content_fl .moment_content_image_img { background-image: url(../img/fl/moment_content_img_fl2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .moment_main_bg { background-image: url(../img/moment/momentum_bg2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .momentGT_main_bg { background-image: url(../img/gt/momentumGT_bg2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .momentSFL_main_bg { background-image: url(../img/sfl/sfl_image2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .momentFL_main_bg { background-image: url(../img/fl/fl_image2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .connections_content .image1 { background-image: url(../img/connections/moment2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .connections_content .image2 { background-image: url(../img/connections/moment_gt2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .connections_content .image3 { background-image: url(../img/connections/moment_sfl2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .connections_content .image4 { background-image: url(../img/connections/moment_fl2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .employee_main_bg { background-image: url(../img/employee/employee_main_bg2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .engineer_main_bg { background-image: url(../img/engineer/engineer_main_bg2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+
+  .webp .manager_main_bg { background-image: url(../img/manager/manager_main_bg2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .home_images_1 { background-image: url(../img/home/woman3x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .home_images_2 { background-image: url(../img/home/manager3x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .home_images_3 { background-image: url(../img/home/engineer3x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .moment_content_tmk .moment_content_image_img { background-image: url(../img/moment/moment_content_img3x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .moment_content_gt .moment_content_image_img { background-image: url(../img/gt/img_gt3x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .moment_content_sfl .moment_content_image_img { background-image: url(../img/sfl/moment_content_img_sfl3x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .moment_content_fl .moment_content_image_img { background-image: url(../img/fl/moment_content_img_fl3x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .moment_main_bg { background-image: url(../img/moment/momentum_bg3x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .momentGT_main_bg { background-image: url(../img/gt/momentumGT_bg3x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .momentSFL_main_bg { background-image: url(../img/sfl/sfl_image3x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .momentFL_main_bg { background-image: url(../img/fl/fl_image3x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .connections_content .image1 { background-image: url(../img/connections/moment3x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .connections_content .image2 { background-image: url(../img/connections/moment_gt3x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .connections_content .image3 { background-image: url(../img/connections/moment_sfl3x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .connections_content .image4 { background-image: url(../img/connections/moment_fl3x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .employee_main_bg { background-image: url(../img/employee/employee_main_bg3x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .engineer_main_bg { background-image: url(../img/engineer/engineer_main_bg3x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+
+  .webp .manager_main_bg { background-image: url(../img/manager/manager_main_bg3x.webp); }
+}
