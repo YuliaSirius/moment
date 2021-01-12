@@ -2806,8 +2806,8 @@ iframe {
 .moment_content_employee > div:nth-child(3),
 .moment_content_engineer > div:nth-child(3),
 .moment_content_manager > div:nth-child(3) {
-  -ms-flex-preferred-size: 7%;
-      flex-basis: 7%;
+  -ms-flex-preferred-size: 7.1%;
+      flex-basis: 7.1%;
 }
 
 .moment_content_employee > div:nth-child(4),
@@ -2820,8 +2820,8 @@ iframe {
 .moment_content_employee > div:nth-child(5),
 .moment_content_engineer > div:nth-child(5),
 .moment_content_manager > div:nth-child(5) {
-  -ms-flex-preferred-size: 10.6%;
-      flex-basis: 10.6%;
+  -ms-flex-preferred-size: 10.7%;
+      flex-basis: 10.7%;
 }
 
 .moment_content_employee > div:nth-child(6),
@@ -2907,6 +2907,11 @@ iframe {
 .moment_content_engineer .moment_content_text4 span,
 .moment_content_manager .moment_content_text4 span {
   font-weight: bold;
+}
+
+.moment_content_engineer > div:nth-child(3) {
+  -ms-flex-preferred-size: 7.8%;
+      flex-basis: 7.8%;
 }
 
 .moment_content_manager > div:first-child {
@@ -3091,9 +3096,9 @@ iframe {
   padding-top: 20px;
 }
 
-.employee_content_profile .photo,
-.engineer_content_profile .photo,
-.manager_content_profile .photo {
+.employee_content_profile picture,
+.engineer_content_profile picture,
+.manager_content_profile picture {
   margin-right: 64px;
 }
 
@@ -3106,7 +3111,7 @@ iframe {
 .employee_content_profile > div .moment_content_text2,
 .engineer_content_profile > div .moment_content_text2,
 .manager_content_profile > div .moment_content_text2 {
-  margin-bottom: 53%;
+  margin-bottom: 45%;
 }
 
 .employee_content_profile > div .moment_content_text1,
