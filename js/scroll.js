@@ -1,4 +1,3 @@
-// (function () {
 'use strict';
 
 const wrapper = document.querySelector('.wrapper');
@@ -37,27 +36,16 @@ function blur() {
   if (blurred) {
     return;
   }
-  console.log('555');
   let element = document.querySelector('#blur');
-  // element.addEventListener('mySpecialEvent', function () {
     element.beginElement();
-  // });
-
-  // elements.beginElement();
 }
 
 function delBlur() {
   if (!blurred) {
     return;
   }
-  console.log('666');
   let element = document.querySelector('#delblur');
-  // element.addEventListener('mySpecialEvent', function () {
     element.beginElement();
-    console.log('fggtsjn');
-  // });
-
-  // elements.beginElement();
 }
 
 function addMouseWell(elem, callback) {
@@ -75,12 +63,5 @@ function addMouseWell(elem, callback) {
 }
 
 addMouseWell(window, scrollHorizontally);
-// })()
 
-window.addEventListener("load", loaded)
 
-function loaded() {
-
-console.log("loaded")
-
-}

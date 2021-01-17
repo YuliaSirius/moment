@@ -336,9 +336,3 @@ function openPage(event) {
       window.location.assign("engineer.html");
   }, 600);
 }
-
-// if (location.hash) { // на случай рефреша
-//   document.addEventListener("DOMContentLoaded", function(event) {
-//     setHash(location.hash);
-//   });
-// }

@@ -1,7 +1,4 @@
-
-// (function () {
   'use strict';
-
 let increase = document.querySelectorAll('.increase');
 let incr = [...increase];
 let modelMomentum = document.querySelector('.connections_model_momentum');
@@ -49,4 +46,3 @@ function hideModel() {
   this.closest('.model').classList.remove('showModel');
   openModel = false;
 }
-// })();

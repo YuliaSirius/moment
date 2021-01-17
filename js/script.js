@@ -1,4 +1,3 @@
-// (function () {
 'use strict';
 
 let openModel = false;
@@ -72,4 +71,4 @@ function closeRequest() {
     openForm = false;
   }
 }
-// })();
+
