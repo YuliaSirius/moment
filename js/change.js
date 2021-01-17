@@ -326,6 +326,9 @@ function openPage(event) {
   this.querySelector('.wr_vid').classList.add('openvideo');
   setTimeout(() => {
     if (this == bottomVideoEmployee)
+      
+      
+      
       window.location.assign("employee.html");
       if (this == bottomVideoManager)
       window.location.assign("manager.html");

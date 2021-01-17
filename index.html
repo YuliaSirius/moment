@@ -3,411 +3,466 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="./img/favicon.ico" />
-         <title>TORQUE SERIES</title>
+    <link rel="prerender" href="employee.html" />
+    <link rel="prefetch" href="employee.html" />
+    <title>TORQUE SERIES</title>
   </head>
   <body>
+    <script src="./js/preload.js"></script>
     <svg class="hideSvg">
       <filter id="sharpBlur">
         <feGaussianBlur stdDeviation="0">
-          <animate id="blur" attributeType="XML"
+          <animate
+            id="blur"
+            attributeType="XML"
             attributeName="stdDeviation"
             from="0"
             to="30"
             dur="0.3s"
             fill="freeze"
-            begin="indefinite" />
-          <animate id="delblur"
+            begin="indefinite"
+          />
+          <animate
+            id="delblur"
             attributeType="XML"
             attributeName="stdDeviation"
             from="30"
             to="0"
             dur="0.3s"
             fill="freeze"
-            begin="indefinite" />
+            begin="indefinite"
+          />
         </feGaussianBlur>
-        <feColorMatrix type="matrix"
-          values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 9 0"></feColorMatrix>
+        <feColorMatrix
+          type="matrix"
+          values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 9 0"
+        ></feColorMatrix>
         <feComposite in2="SourceGraphic" operator="in"></feComposite>
       </filter>
     </svg>
- <div class="preload">
-  <svg
-    width="58"
-    height="58"
-    viewBox="0 0 58 58"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
-    <rect width="58" height="58" fill="url(#pattern0)" />
-    <defs>
-      <pattern
-        id="pattern0"
-        patternContentUnits="objectBoundingBox"
-        width="1"
-        height="1">
-        <use xlink:href="#image0" transform="scale(0.00625)" />
-      </pattern>
-      <image
-        id="image0"
-        width="160"
-        height="160"
-        xlink:href="data:image/png;base64,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"/>
-    </defs>
-  </svg>
-  <div class="progstat"></div>
-  <div class="progress"></div>
-</div>
- 
-     <header>
-  <div class="header_top">
-    <div class="container1920">
-      <div class="header_top_right">
-        <a href="index.html">
-          <picture>
-            <source type="image/webp" srcset="./img/header/logo1x.webp 1x, ./img/header/logo2x.webp 2x, ./img/header/logo3x.webp 3x" >
-            <img src="./img/header/logo1x.png" class="logo_image" alt="logo" srcset="./img/header/logo2x.png 2x, ./img/header/logo3x.png 3x" />
-          </picture>
-        </a>
-        <p class="logo_text">TORQUE SERIES</p>
-      </div>
-      <div class="header_top_left">
-        <a href="tel:+7(495)7757600" class="header_top_left_tel">+7 (495) 775 7600</a>
-        <div class="header_top_left_icon-menu">
-          <p></p>
-          <p></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="header_bottom">
-    <div class="container1440">
-      <div class="header_bottom_link">
-        <span class="employee">Сотрудник проектного института</span>
-      </div>
-      <div class="header_bottom_link">
-        <span class="engineer">Инженер службы бурения</span>
-      </div>
-      <div class="header_bottom_link">
-        <span class="manager">Топ-менеджер</span>
-      </div>
-    </div>
-  </div>
-  <div class="menu">
-  <div class="menu_header">
-    <div class="container1920">
-      <div class="menu_header_right">
-        <a href="index.html">
-          <picture>
-            <source type="image/webp" srcset="./img/header/logo1x.webp 1x, ./img/header/logo2x.webp 2x, ./img/header/logo3x.webp 3x" >
-            <img src="./img/header/logo1x.png" class="logo_image" alt="logo" srcset="./img/header/logo2x.png 2x, ./img/header/logo3x.png 3x" />
-          </picture>
-        </a>
-        <p class="logo_text">TORQUE SERIES</p>
-      </div>
-      <div class="menu_header_centner">
-        <p>MENU</p>
-      </div>
-      <div class="menu_header_left">
-        <a href="tel:+7(495)7757600" class="menu_header_left_tel">+7 (495) 775 7600</a>
-      </div>
-    </div>
-  </div>
-  
-  <div class="container1440">
-    <div class="menu_content">
-      <div class="menu_content_nav">
-        <div class="menu_content_nav_row">
-          <div class="column">
-            <a href="momentum.html" class="momentum_link">Momentum</a>
+       <header>
+      <div class="header_top">
+        <div class="container1920">
+          <div class="header_top_right">
+            <a href="index.html">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./img/header/logo1x.webp 1x,
+                    ./img/header/logo2x.webp 2x,
+                    ./img/header/logo3x.webp 3x
+                  "
+                />
+                <img
+                  src="./img/header/logo1x.png"
+                  class="logo_image"
+                  alt="logo"
+                  srcset="
+                    ./img/header/logo2x.png 2x,
+                    ./img/header/logo3x.png 3x
+                  "
+                />
+              </picture>
+            </a>
+            <p class="logo_text">TORQUE SERIES</p>
           </div>
-          <div>
-            <a href="momentumgt.html" class="momentumgt_link">Momentum GT</a>
+          <div class="header_top_left">
+            <a href="tel:+7(495)7757600" class="header_top_left_tel"
+              >+7 (495) 775 7600</a
+            >
+            <div class="header_top_left_icon-menu">
+              <p></p>
+              <p></p>
+            </div>
           </div>
         </div>
-        <div class="menu_content_nav_row">
-          <div class="column">
-            <a href="momentumsfl.html" class="momentumsfl_link">Momentum SFL</a>
+      </div>
+      <div class="header_bottom">
+        <div class="container1440">
+          <div class="header_bottom_link">
+            <span class="employee">Сотрудник проектного института</span>
           </div>
-          <div>
-            <a href="momentumfl.html" class="momentumfl_link">Momentum FL</a>
+          <div class="header_bottom_link">
+            <span class="engineer">Инженер службы бурения</span>
+          </div>
+          <div class="header_bottom_link">
+            <span class="manager">Топ-менеджер</span>
           </div>
         </div>
-        <div class="menu_content_nav_row3">
-          <p class="menu_content_nav_row3_contacts">Контакты</p>
-          <p class="menu_content_nav_row3_adress">
-            105062, Москва, ул. Покровка, д.40 стр.2а<br />
-            sales@tmk-group.com, tmk@tmk-group.com<br />
-            +7 (495) 775 7600
-          </p>
-
+      </div>
+      <div class="menu">
+        <div class="menu_header">
+          <div class="container1920">
+            <div class="menu_header_right">
+              <a href="index.html">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/header/logo1x.webp 1x,
+                      ./img/header/logo2x.webp 2x,
+                      ./img/header/logo3x.webp 3x
+                    "
+                  />
+                  <img
+                    src="./img/header/logo1x.png"
+                    class="logo_image"
+                    alt="logo"
+                    srcset="
+                      ./img/header/logo2x.png 2x,
+                      ./img/header/logo3x.png 3x
+                    "
+                  />
+                </picture>
+              </a>
+              <p class="logo_text">TORQUE SERIES</p>
+            </div>
+            <div class="menu_header_centner">
+              <p>MENU</p>
+            </div>
+            <div class="menu_header_left">
+              <a href="tel:+7(495)7757600" class="menu_header_left_tel"
+                >+7 (495) 775 7600</a
+              >
+            </div>
+          </div>
         </div>
 
+        <div class="container1440">
+          <div class="menu_content">
+            <div class="menu_content_nav">
+              <div class="menu_content_nav_row">
+                <div class="column">
+                  <a href="momentum.html" class="momentum_link">Momentum</a>
+                </div>
+                <div>
+                  <a href="momentumgt.html" class="momentumgt_link"
+                    >Momentum GT</a
+                  >
+                </div>
+              </div>
+              <div class="menu_content_nav_row">
+                <div class="column">
+                  <a href="momentumsfl.html" class="momentumsfl_link"
+                    >Momentum SFL</a
+                  >
+                </div>
+                <div>
+                  <a href="momentumfl.html" class="momentumfl_link"
+                    >Momentum FL</a
+                  >
+                </div>
+              </div>
+              <div class="menu_content_nav_row3">
+                <p class="menu_content_nav_row3_contacts">Контакты</p>
+                <p class="menu_content_nav_row3_adress">
+                  105062, Москва, ул. Покровка, д.40 стр.2а<br />
+                  sales@tmk-group.com, tmk@tmk-group.com<br />
+                  +7 (495) 775 7600
+                </p>
+              </div>
+            </div>
+            <div class="menu_content_image">
+              <div class="menu_content_image_wr">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/moment/moment_content_img.webp   1x,
+                      ./img/moment/moment_content_img2x.webp 2x,
+                      ./img/moment/moment_content_img3x.webp 3x
+                    "
+                  />
+                  <img
+                    src="./img/moment/moment_content_img.png"
+                    alt="image"
+                    srcset="
+                      ./img/moment/moment_content_img2x.png 2x,
+                      ./img/moment/moment_content_img3x.png 3x
+                    "
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="menu_content_image">
-        <div class="menu_content_image_wr">
-          <picture>
-            <source type="image/webp" srcset="./img/moment/moment_content_img.webp 1x, ./img/moment/moment_content_img2x.webp 2x, ./img/moment/moment_content_img3x.webp 3x" >
-            <img src="./img/moment/moment_content_img.png"  alt="image" srcset="./img/moment/moment_content_img2x.png 2x, ./img/moment/moment_content_img3x.png 3x" />
-          </picture>
-                        </div>
+      <div class="application">
+        <div class="container1440">
+          <div class="menu_header_left_icon-menu">
+            <p></p>
+            <p></p>
+          </div>
+          <div class="application_content">
+            <form action="#" class="application_content_form">
+              <h4>Узнать подробнее о соединении</h4>
+              <input type="text" placeholder="Имя" />
+              <input type="tel" placeholder="Телефон" />
+              <input type="email" placeholder="E-mail" />
+              <input type="submit" value="Отправить" />
+            </form>
+            <div class="application_content_img">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./img/moment/moment_content_img.webp   1x,
+                    ./img/moment/moment_content_img2x.webp 2x,
+                    ./img/moment/moment_content_img3x.webp 3x
+                  "
+                />
+                <img
+                  src="./img/moment/moment_content_img.png"
+                  alt="photo"
+                  srcset="
+                    ./img/moment/moment_content_img2x.png 2x,
+                    ./img/moment/moment_content_img3x.png 3x
+                  "
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-
-</div>
- <div class="application">
-  <div class="container1440">
-    <div class="menu_header_left_icon-menu">
-      <p></p>
-      <p></p>
-    </div>
-    <div class="application_content">
-      <form action="#" class="application_content_form">
-        <h4>Узнать подробнее о соединении</h4>
-        <input type="text" placeholder="Имя" />
-        <input type="tel" placeholder="Телефон" />
-        <input type="email" placeholder="E-mail" />
-        <input type="submit" value="Отправить" />
-      </form>
-      <div class="application_content_img">
-
-        <picture>
-          <source type="image/webp" srcset="./img/moment/moment_content_img.webp 1x, ./img/moment/moment_content_img2x.webp 2x, ./img/moment/moment_content_img3x.webp 3x" >
-          <img src="./img/moment/moment_content_img.png" alt="photo" srcset="./img/moment/moment_content_img2x.png 2x, ./img/moment/moment_content_img3x.png 3x" />
-        </picture>
-
-
-        
-      </div>
-    </div>
-  </div>
-</div>
-<div class="application-wr"></div>
-
-</header>
+      <div class="application-wr"></div>
+    </header>
 
     <div class="header-line"></div>
-    <main><section class="home">
-  <div class="container1440">
-    <div class="home_content">
-      <div class="wr-1">
-        <h1>
-          TORQUE серия
-          <span>
-            Резьбовые соединения<br />
-            премиум класса
-          </span>
-        </h1>
-        <h2 class="employee_title">сотрудник проектного института</h2>
-        <h2 class="manager_title">топ-<br />менеждер</h2>
-        <h2 class="engineer_title">инженер службы бурения</h2>
-      </div>
-      <div class="wr-2">
-        <div class="home_content_text">
-          <h3>
-            Созданы для экспертов нефтегазовой сферы, решающих сложные
-            технологические задачи:
-          </h3>
-          <div class="home_content_variety">
-            <div>
-              <img src="./img/home/icon1.svg" alt="icon" />
-              <p>Скважины сложной траектории</p>
+    <main>
+      <section class="home">
+        <div class="container1440">
+          <div class="home_content">
+            <div class="wr-1">
+              <h1>
+                TORQUE серия
+                <span>
+                  Резьбовые соединения<br />
+                  премиум класса
+                </span>
+              </h1>
+              <h2 class="employee_title">сотрудник проектного института</h2>
+              <h2 class="manager_title">топ-<br />менеждер</h2>
+              <h2 class="engineer_title">инженер службы бурения</h2>
             </div>
-            <div>
-              <img src="./img/home/icon2.svg" alt="icon" />
-              <p>Бурение на обсадной колонне</p>
+            <div class="wr-2">
+              <div class="home_content_text">
+                <h3>
+                  Созданы для экспертов нефтегазовой сферы, решающих сложные
+                  технологические задачи:
+                </h3>
+                <div class="home_content_variety">
+                  <div>
+                    <img src="./img/home/icon1.svg" alt="icon" />
+                    <p>Скважины сложной траектории</p>
+                  </div>
+                  <div>
+                    <img src="./img/home/icon2.svg" alt="icon" />
+                    <p>Бурение на обсадной колонне</p>
+                  </div>
+                  <div>
+                    <img src="./img/home/icon3.svg" alt="icon" />
+                    <p>Строительство ERD-скважин</p>
+                  </div>
+                </div>
+              </div>
+              <div class="employee_text">
+                <p>
+                  Мы с коллегами ежедневно оцениваем возможность строительства
+                  конкретной скважины и прорабатываем все этапы работ с точки
+                  зрения оптимальности технических, технологических и
+                  экономических решений. С каждым заказчиком работа ведется
+                  индивидуально, благодаря чему нам удается добиваться
+                  максимальной технико-экономической эффективности.
+                </p>
+              </div>
+              <div class="engineer_text">
+                <p>
+                  Выполнение целевых показателей по добыче невозможно без
+                  выполнения заданного плана бурения. Ввод новых скважин –
+                  неотъемлемый процесс освоения месторождения и развития любой
+                  нефтегазовой компании.
+                </p>
+              </div>
+              <div class="manager_text">
+                <p>
+                  Для обеспечения максимальной технико-экономической
+                  эффективности бурения необходимо чётко и ясно обозначить цели
+                  и добиваться их качественного исполнения. Не менее важно
+                  следовать принятым системам менеджмента качества, а также
+                  планировать работы с учетом заботы об окружающей среде и
+                  здоровье сотрудников. Я ежедневно анализирую поставленные
+                  передо мной задачи и обеспечиваю полномасштабное внедрение
+                  технологических решений.
+                </p>
+              </div>
             </div>
-            <div>
-              <img src="./img/home/icon3.svg" alt="icon" />
-              <p>Строительство ERD-скважин</p>
+            <div class="wr-3">
+              <div class="home_links">
+                <a href="video.html" class="button-main">ВСЕ СОЕДИНЕНИЯ </a>
+                <p>Технические характеристики<br />соединений</p>
+              </div>
+              <div class="employee_links">
+                <a href="employee.html" class="button-main">Подробнее</a>
+                <img src="./img/home/icon1.svg" alt="icon" />
+                <p>Скважины сложной<br />траектории</p>
+              </div>
+              <div class="engineer_links">
+                <a href="engineer.html" class="button-main">Подробнее</a>
+                <img src="./img/home/icon2.svg" alt="icon" />
+                <p>
+                  Бурение на обсадной<br />
+                  колонне
+                </p>
+              </div>
+              <div class="manager_links">
+                <a href="manager.html" class="button-main">Подробнее</a>
+                <img src="./img/home/icon3.svg" alt="icon" />
+                <p>
+                  Строительство<br />
+                  ERD-скважин
+                </p>
+              </div>
             </div>
           </div>
+          <div class="home_images">
+            <div class="home_images_1 employee-image"></div>
+            <div class="home_images_1_speech">
+              <p>
+                Добрый день! Меня зовут Елена, я занимаюсь проектированием
+                скважин для особо сложных и нестандартных проектов.
+              </p>
+            </div>
+            <div class="home_images_2 manager-image"></div>
+            <div class="home_images_2_speech">
+              <p>
+                Меня зовут Дмитрий Николаевич и я курирую вопросы по оптимизации
+                затрат и снижению издержек при реализации нефтегазовых проектов.
+              </p>
+            </div>
+            <div class="home_images_3 engineer-image"></div>
+            <div class="home_images_3_speech">
+              <p>
+                Меня зовут Михаил. Я занимаюсь поиском современных
+                технологических решений, позволяющих повысить эффективность
+                бурения на его предприятии.
+              </p>
+            </div>
+          </div>
+          <div class="line"></div>
         </div>
-        <div class="employee_text">
-          <p>
-            Мы с коллегами ежедневно оцениваем возможность строительства
-            конкретной скважины и прорабатываем все этапы работ с точки зрения
-            оптимальности технических, технологических и экономических решений.
-            С каждым заказчиком работа ведется индивидуально, благодаря чему нам
-            удается добиваться максимальной технико-экономической эффективности.
-          </p>
+        <div class="video-bg">
+          <div class="video-bg_wr">
+            <video
+              class="video_background"
+              preload="auto"
+              autoplay
+              loop
+              muted
+              playsinline
+              poster="./img/home/home_poster.jpg"
+            >
+              <source src="./video/start.ogv" type="video/ogv" />
+              <source src="./video/start.mp4" type="video/mp4" />
+              <source src="./video/start.webm" type="video/webm" />
+            </video>
+          </div>
         </div>
-        <div class="engineer_text">
-          <p>
-            Выполнение целевых показателей по добыче невозможно без выполнения
-            заданного плана бурения. Ввод новых скважин – неотъемлемый процесс
-            освоения месторождения и развития любой нефтегазовой компании.
-          </p>
-        </div>
-        <div class="manager_text">
-          <p>
-            Для обеспечения максимальной технико-экономической эффективности
-            бурения необходимо чётко и ясно обозначить цели и добиваться их
-            качественного исполнения. Не менее важно следовать принятым системам
-            менеджмента качества, а также планировать работы с учетом заботы об
-            окружающей среде и здоровье сотрудников. Я ежедневно анализирую
-            поставленные передо мной задачи и обеспечиваю полномасштабное
-            внедрение технологических решений.
-          </p>
-        </div>
+        <svg
+          class="mouse"
+          width="24"
+          height="43"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M22 12v19c0 5.523-4.477 10-10 10S2 36.523 2 31V12C2 6.477 6.477 2 12 2s10 4.477 10 10zM0 12C0 5.373 5.373 0 12 0s12 5.373 12 12v19c0 6.627-5.373 12-12 12S0 37.627 0 31V12zm11-3v10h2V9h-2z"
+            fill="#454545"
+          />
+        </svg>
+        <button class="button-other language">
+          <span>en</span>
+        </button>
+        <button class="button-other sound">
+          <span class="sound_img">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect y="3" width="2" height="11" fill="#454545" />
+              <rect x="4" width="2" height="14" fill="#454545" />
+              <rect x="8" y="8" width="2" height="6" fill="#454545" />
+              <rect x="12" y="6" width="2" height="8" fill="#454545" />
+            </svg>
+          </span>
+          <span>sound on</span>
+        </button>
+      </section>
+      <div class="employee_video">
+        <a href="employee.html" class="employee_video_bottom">
+          <video
+            preload="auto"
+            autoplay
+            loop
+            muted
+            playsinline
+            poster="./img/moment/moment_pooster.jpg"
+          >
+            <source src="./video/momentum.ogv" type="video/ogv" />
+            <source src="./video/momentum.mp4" type="video/mp4" />
+            <source src="./video/momentum.webm" type="video/webm" />
+          </video>
+          <div class="wr_vid"></div>
+        </a>
       </div>
-      <div class="wr-3">
-        <div class="home_links">
-          <a href="video.html" class="button-main">ВСЕ СОЕДИНЕНИЯ </a>
-          <p>Технические характеристики<br />соединений</p>
-        </div>
-        <div class="employee_links">
-          <a href="employee.html" class="button-main">Подробнее</a>
-          <img src="./img/home/icon1.svg" alt="icon" />
-          <p>Скважины сложной<br />траектории</p>
-        </div>
-        <div class="engineer_links">
-          <a href="engineer.html" class="button-main">Подробнее</a>
-          <img src="./img/home/icon2.svg" alt="icon" />
-          <p>
-            Бурение на обсадной<br />
-            колонне
-          </p>
-        </div>
-        <div class="manager_links">
-          <a href="manager.html" class="button-main">Подробнее</a>
-          <img src="./img/home/icon3.svg" alt="icon" />
-          <p>
-            Строительство<br />
-            ERD-скважин
-          </p>
-        </div>
+      <div class="engineer_video">
+        <a href="engineer.html" class="engineer_video_bottom">
+          <video
+            preload="auto"
+            autoplay
+            loop
+            muted
+            playsinline
+            poster="./img/engineer/engineer_poster.jpg"
+          >
+            <source src="./video/engineer.ogv" type="video/ogv" />
+            <source src="./video/engineer.mp4" type="video/mp4" />
+            <source src="./video/engineer.webm" type="video/webm" />
+          </video>
+          <div class="wr_vid"></div>
+        </a>
       </div>
-    </div>
-    <div class="home_images">
-      <div class="home_images_1 employee-image"></div>
-      <div class="home_images_1_speech">
-        <p>
-          Добрый день! Меня зовут Елена, я занимаюсь проектированием скважин для
-          особо сложных и нестандартных проектов.
-        </p>
+      <div class="manager_video">
+        <a href="manager.html" class="manager_video_bottom">
+          <video
+            preload="auto"
+            autoplay
+            loop
+            muted
+            playsinline
+            poster="./img/manager/manager_poster.jpg"
+          >
+            <source src="./video/manager.ogv" type="video/ogv" />
+            <source src="./video/manager.mp4" type="video/mp4" />
+            <source src="./video/manager.webm" type="video/webm" />
+          </video>
+          <div class="wr_vid"></div>
+        </a>
       </div>
-      <div class="home_images_2 manager-image"></div>
-      <div class="home_images_2_speech">
-        <p>
-          Меня зовут Дмитрий Николаевич и я курирую вопросы по оптимизации
-          затрат и снижению издержек при реализации нефтегазовых проектов.
-        </p>
-      </div>
-      <div class="home_images_3 engineer-image"></div>
-      <div class="home_images_3_speech">
-        <p>
-          Меня зовут Михаил. Я занимаюсь поиском современных технологических
-          решений, позволяющих повысить эффективность бурения на его
-          предприятии.</p>
-      </div>
-    </div>
-    <div class="line"></div>
-  </div>
-  <div class="video-bg">
-    <div class="video-bg_wr">
-      <video class="video_background"
-        preload="auto"
-        autoplay
-        loop
-        muted
-        playsinline
-        poster="./img/home/home_poster.jpg">
-        <source src="./video/start.ogv" type="video/ogv" />
-        <source src="./video/start.mp4" type="video/mp4" />
-        <source src="./video/start.webm" type="video/webm" />
-      </video>
-    </div>
-  </div>
-  <svg class="mouse"
-    width="24"
-    height="43"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd"
-      clip-rule="evenodd"
-      d="M22 12v19c0 5.523-4.477 10-10 10S2 36.523 2 31V12C2 6.477 6.477 2 12 2s10 4.477 10 10zM0 12C0 5.373 5.373 0 12 0s12 5.373 12 12v19c0 6.627-5.373 12-12 12S0 37.627 0 31V12zm11-3v10h2V9h-2z"
-      fill="#454545"/>
-  </svg>
-  <button class="button-other language">
-    <span>en</span>
-  </button>
-  <button class="button-other sound">
-    <span class="sound_img">
-      <svg width="14"
-        height="14"
-        viewBox="0 0 14 14"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <rect y="3" width="2" height="11" fill="#454545" />
-        <rect x="4" width="2" height="14" fill="#454545" />
-        <rect x="8" y="8" width="2" height="6" fill="#454545" />
-        <rect x="12" y="6" width="2" height="8" fill="#454545" />
-      </svg>
-    </span>
-    <span>sound on</span>
-  </button>
-
-</section>
-<div class="employee_video">
-  <a href="employee.html" class="employee_video_bottom">
-    <video preload="auto"
-      autoplay
-      loop
-      muted
-      playsinline
-      poster="./img/moment/moment_pooster.jpg">
-      <source src="./video/momentum.ogv" type="video/ogv" />
-      <source src="./video/momentum.mp4" type="video/mp4" />
-      <source src="./video/momentum.webm" type="video/webm" />
-    </video>
-    <div class="wr_vid"></div>
-  </a>
-</div>
-<div class="engineer_video">
-  <a href="engineer.html" class="engineer_video_bottom">
-    <video preload="auto"
-      autoplay
-      loop
-      muted
-      playsinline
-      poster="./img/engineer/engineer_poster.jpg">
-      <source src="./video/engineer.ogv" type="video/ogv" />
-      <source src="./video/engineer.mp4" type="video/mp4" />
-      <source src="./video/engineer.webm" type="video/webm" />
-    </video>
-    <div class="wr_vid"></div>
-  </a>
-</div>
-<div class="manager_video">
-  <a href="manager.html" class="manager_video_bottom">
-    <video preload="auto"
-      autoplay
-      loop
-      muted
-      playsinline
-      poster="./img/manager/manager_poster.jpg">
-      <source src="./video/manager.ogv" type="video/ogv" />
-      <source src="./video/manager.mp4" type="video/mp4" />
-      <source src="./video/manager.webm" type="video/webm" />
-    </video>
-    <div class="wr_vid"></div>
-  </a>
-</div>
-</main>
+    </main>
     <div class="request">
       <p>оставить заявку</p>
-      
     </div>
-    <script src="./js/change.min.js"></script>
-    <script src="./js/preload.js"></script>
-    <script src="./js/menu.min.js"></script> 
-     <script src="./js/script.min.js"></script>
+    <script src="./js/change.js"></script>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
-
-
-
-

@@ -2584,13 +2584,13 @@ header .logo_text {
 }
 
 .other-column:hover {
-  -webkit-animation: columnHover 700ms linear forwards;
-          animation: columnHover 700ms linear forwards;
+  -webkit-animation: columnHover 900ms linear forwards;
+          animation: columnHover 900ms linear forwards;
 }
 
 .other-column:hover .detail {
-  -webkit-animation: detailHover 700ms linear forwards;
-          animation: detailHover 700ms linear forwards;
+  -webkit-animation: detailHover 900ms linear forwards;
+          animation: detailHover 900ms linear forwards;
 }
 
 .other-column:hover .increase {
@@ -2598,8 +2598,8 @@ header .logo_text {
 }
 
 .other-column:hover h5 {
-  -webkit-animation: textHover 700ms linear forwards;
-          animation: textHover 700ms linear forwards;
+  -webkit-animation: textHover 900ms linear forwards;
+          animation: textHover 900ms linear forwards;
 }
 
 @-webkit-keyframes columnHover {
@@ -3686,6 +3686,7 @@ input[type='tel'] {
 
 .loaded {
   display: none;
+  
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) {

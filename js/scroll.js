@@ -1,5 +1,6 @@
 // (function () {
 'use strict';
+
 const wrapper = document.querySelector('.wrapper');
 let sectionWidth = document.querySelector('.moment_content').offsetWidth;
 let video = document.querySelector('.video_background');
@@ -36,16 +37,27 @@ function blur() {
   if (blurred) {
     return;
   }
-  let elements = document.querySelector('#blur');
-  elements.beginElement();
+  console.log('555');
+  let element = document.querySelector('#blur');
+  // element.addEventListener('mySpecialEvent', function () {
+    element.beginElement();
+  // });
+
+  // elements.beginElement();
 }
 
 function delBlur() {
   if (!blurred) {
     return;
   }
-  let elements = document.querySelector('#delblur');
-  elements.beginElement();
+  console.log('666');
+  let element = document.querySelector('#delblur');
+  // element.addEventListener('mySpecialEvent', function () {
+    element.beginElement();
+    console.log('fggtsjn');
+  // });
+
+  // elements.beginElement();
 }
 
 function addMouseWell(elem, callback) {
@@ -63,4 +75,12 @@ function addMouseWell(elem, callback) {
 }
 
 addMouseWell(window, scrollHorizontally);
-// })();
+// })()
+
+window.addEventListener("load", loaded)
+
+function loaded() {
+
+console.log("loaded")
+
+}
